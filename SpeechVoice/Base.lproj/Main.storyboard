@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeechVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-7q-ddt">
+                                <rect key="frame" x="195" y="94" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Lpm-5y-EHv"/>
+                                    <constraint firstAttribute="width" constant="24" id="bfr-ug-rpl"/>
+                                </constraints>
+                                <state key="normal" image="ic_keyboard_voice"/>
+                                <connections>
+                                    <action selector="listenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dN4-WE-GLF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mw-lM-Xvs">
+                                <rect key="frame" x="16" y="148" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Mw-lM-Xvs" secondAttribute="trailing" constant="16" id="8NP-07-FSl"/>
+                            <constraint firstItem="1Mw-lM-Xvs" firstAttribute="top" secondItem="eHj-7q-ddt" secondAttribute="bottom" constant="30" id="Sri-gp-gTm"/>
+                            <constraint firstItem="eHj-7q-ddt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="a5W-c3-LeS"/>
+                            <constraint firstItem="eHj-7q-ddt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gPl-qd-EJH"/>
+                            <constraint firstItem="1Mw-lM-Xvs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oH5-PV-kMH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="text" destination="1Mw-lM-Xvs" id="de5-hl-7Bl"/>
+                        <outlet property="voice" destination="eHj-7q-ddt" id="rAO-Jt-N6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_keyboard_voice" width="24" height="24"/>
+    </resources>
+</document>
